@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Pitaia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fce4ec;
+      color: #333;
+    }
+    h1 {
+      color: #e91e63;
+    }
+    .apology-text {
+      margin: 20px auto;
+      max-width: 600px;
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    .buttons {
+      margin-top: 30px;
+    }
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 1.2em;
+      color: #fff;
+      text-decoration: none;
+      background-color: #e91e63;
+      border-radius: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+    .button:hover {
+      background-color: #d81b60;
+    }
+    #no:hover {
+      position: absolute;
+      left: calc(10% + 50px);
+      top: calc(20% + 10px);
+    }
+    .carousel {
+      position: fixed;
+      top: 10%;
+      right: 0;
+      width: 20%;
+      height: 80%;
+      overflow: hidden;
+      background-color: #fff;
+      border-left: 2px solid #e91e63;
+    }
+    .carousel img {
+      width: 100%;
+      display: block;
+      animation: slide 10s linear infinite;
+    }
+    @keyframes slide {
+      0%, 20% { transform: translateY(0); }
+      25%, 45% { transform: translateY(-100%); }
+      50%, 70% { transform: translateY(-200%); }
+      75%, 100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Minha Pitaia</h1>
+  <div class="apology-text">
+    <p>Me desculpa por ter te chateado e ter feito você sentir que é qualquer uma pra mim, você tá longe disso!!!</p>
+    <p>Eu já falei e vou repetir de novo até você entender: sou seu fã, admiro toda essa força que você carrega contigo...</p>
+    <p>Quando fico pedindo pra você não dormir e conversar comigo, é porque amo tanto sua voz que passar horas conversando sobre vários "nada" se torna tudo.</p>
+  </div>
+  <div class="buttons">
+    <a href="#" class="button" id="yes">Sim</a>
+    <a href="#" class="button" id="no">Não</a>
+  </div>
+  <div class="carousel">
+    <!-- Substitua as URLs abaixo por links de imagens -->
+    <img src="https://via.placeholder.com/150" alt="Imagem 1">
+    <img src="https://via.placeholder.com/150" alt="Imagem 2">
+    <img src="https://via.placeholder.com/150" alt="Imagem 3">
+  </div>
+  <script>
+    document.getElementById('yes').addEventListener('click', function() {
+      alert('Parabéns! Você ganhou um vale strogonoff de frango!');
+    });
+  </script>
+</body>
+</html>
