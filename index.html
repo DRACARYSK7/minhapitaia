@@ -38,10 +38,8 @@
     .button:hover {
       background-color: #d81b60;
     }
-    #no:hover {
+    #no {
       position: absolute;
-      left: calc(10% + 50px);
-      top: calc(20% + 10px);
     }
     .carousel {
       position: fixed;
@@ -69,9 +67,11 @@
 <body>
   <h1>Minha Pitaia</h1>
   <div class="apology-text">
-    <p>Me desculpa por ter te chateado e ter feito você sentir que é qualquer uma pra mim, você tá longe disso!!!</p>
-    <p>Eu já falei e vou repetir de novo até você entender: sou seu fã, admiro toda essa força que você carrega contigo...</p>
-    <p>Quando fico pedindo pra você não dormir e conversar comigo, é porque amo tanto sua voz que passar horas conversando sobre vários "nada" se torna tudo.</p>
+    <p>Me desculpa por ter te chateado e feito você sentir que é só mais uma pra mim. Você está tão longe disso!</p>
+    <p>Eu já disse antes, e vou repetir até você entender: sou seu fã. Admiro profundamente essa força incrível que você carrega consigo.</p>
+    <p>Nunca tive tanta certeza do que quero para a minha vida, e isso não é exagero. Estou completamente apaixonado por você. Sou muito realizado ao seu lado, e ninguém nunca me passou a segurança que você me dá.</p>
+    <p>Sei que sou complicado e cometo muitos erros, mas estou tentando mudar, porque sei que vai valer a pena, e não quero te perder. Tenho muito medo de que isso aconteça. Quero ser uma pessoa melhor e fazer por merecer ter alguém tão incrível na minha vida.</p>
+    <p>Não quero mais brigar. É horrível. Fico sem dormir, e não falar com você deixa meu dia incompleto. Quando peço pra você ficar acordada conversando comigo, é porque eu amo tanto sua voz e estar com você que passar horas falando sobre vários "nadas" se torna tudo.</p>
   </div>
   <div class="buttons">
     <a href="#" class="button" id="yes">Sim</a>
@@ -86,6 +86,20 @@
   <script>
     document.getElementById('yes').addEventListener('click', function() {
       alert('Parabéns! Você ganhou um vale strogonoff de frango!');
+    });
+
+    const noButton = document.getElementById('no');
+    document.addEventListener('mousemove', function(e) {
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
+      const distance = Math.sqrt(
+        Math.pow(e.clientX - noButton.offsetLeft, 2) +
+        Math.pow(e.clientY - noButton.offsetTop, 2)
+      );
+      if (distance < 100) {
+        noButton.style.left = x + 'px';
+        noButton.style.top = y + 'px';
+      }
     });
   </script>
 </body>
